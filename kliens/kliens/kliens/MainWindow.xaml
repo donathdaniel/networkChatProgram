@@ -1,0 +1,39 @@
+﻿<Window x:Class="kliens.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kliens"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="Beige">
+        <TextBox Name="NameTextBox" HorizontalAlignment="Left" Margin="30,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" Height="30"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="30,11,0,0" VerticalAlignment="Top"/>
+        <Button Name="ConnectButton" Click="ConnectButton_Click" Content="Connect" HorizontalAlignment="Left" Margin="290,35,0,0" VerticalAlignment="Top" Width="220"  Height="30"/>
+
+        <ListBox Name="OutputListBox" Margin="30,80,270,124">
+        </ListBox>
+
+
+        <ListBox Name="ConnectedNamesListBox" Margin="550,35,30,255"/>
+        <ComboBox Name="SendTypeComboBox" HorizontalAlignment="Left" Margin="550,160,0,0" VerticalAlignment="Top" Width="205">
+            <ComboBoxItem Content="Public" Tag="0" IsSelected="True"/>
+            <ComboBoxItem Content="Private" Tag="1"/>
+            <ComboBoxItem Content="Group" Tag="2"/>
+            <ComboBoxItem Content="File" Tag="3"/>
+            <ComboBoxItem Content="Image" Tag="4"/>
+        </ComboBox>
+        <TextBox Name="SendTextBox" HorizontalAlignment="Left" Margin="550,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" Height="100"/>
+        <Button Name="SendTextButton" Click="SendTextButton_Click" IsEnabled="False" Content="Send" HorizontalAlignment="Left" Margin="550,300,0,0" VerticalAlignment="Top" Height="30" Width="205"/>
+
+
+        <TextBox Name="GroupNameTextBox" HorizontalAlignment="Left" Margin="30,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Height="30"/>
+        <Button Name="CreateGroupButton" Click="CreateGroupButton_Click" IsEnabled="False" Content="Create Group" HorizontalAlignment="Left" Margin="130,300,0,0" VerticalAlignment="Top" Width="90" Height="30"/>
+        <Button Name="DeleteGroupButton" Click="DeleteGroupButton_Click" IsEnabled="False" Content="Delete Group" HorizontalAlignment="Left" Margin="220,300,0,0" VerticalAlignment="Top" Width="90" Height="30"/>
+        <Button Name="AddToGroupButton" Click="AddToGroupButton_Click" IsEnabled="False" Content="Add to Group" HorizontalAlignment="Left" Margin="310,300,0,0" VerticalAlignment="Top" Width="90" Height="30"/>
+        <Button Name="RemoveFromGroupButton" Click="RemoveFromGroupButton_Click" IsEnabled="False" Content="Remove from Group" HorizontalAlignment="Left" Margin="400,300,0,0" VerticalAlignment="Top" Width="115" Height="30"/>
+       
+
+
+    </Grid>
+</Window>
